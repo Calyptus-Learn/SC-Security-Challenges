@@ -19,13 +19,13 @@ To use this repo you should have the following programmes installed in your mach
 
 ## How to play
 
-- Clone this repo, cd into it and install the dependencies by pasting the following code into your terminal:
+### Clone this repo, cd into it and install the dependencies by pasting the following code into your terminal:
 
-  ```bash
-  git clone https://github.com/nizhunt/Calyptus-CTF.git && cd Calyptus-CTF && yarn install
-  ```
+```bash
+git clone https://github.com/nizhunt/Calyptus-CTF.git && cd Calyptus-CTF && yarn install
+```
 
-- Start Solving the challenges
+### Start Solving the challenges
 
 The `contracts` folder consists of the smart-contracts mentioned in each challenge. `test` folder consists of the setup scripts of each challenge. Pass the test to win the challenge.
 
