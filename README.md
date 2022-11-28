@@ -6,7 +6,7 @@ In this section of the course, you get to use the smart contracts related skills
 
 The game has two characters, Alice and Bob. You help Bob who is trying to give Alice a hard time. Some challenges may time to time introduce other characters as well.
 
-Some challenges require Bob to steal the funds from Alice's smart contracts, some want Bob to halt her smart-contracts using a DOS and some want Bob to blow Alice's mind.
+Some challenges require Bob to steal the funds from Alice's smart contracts, some want Bob to halt Alice's smart-contracts using a DOS and some want Bob to blow Alice's mind.
 
 Are you ready to play the game?
 
