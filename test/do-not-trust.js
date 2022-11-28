@@ -1,22 +1,23 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
+const challengeName = "Do Not Trust Challenge";
 
-describe("[Challenge] Truster", function () {
-  let owner, attacker;
+describe(challengeName, function () {
+  let alice, bob;
 
   const TOKENS_IN_POOL = ethers.utils.parseEther("1000000");
 
   before(async function () {
-    /** SETUP SCENARIO - NO NEED TO CHANGE ANYTHING HERE */
-    [owner, attacker] = await ethers.getSigners();
+    /** SETUP SCENARIO - DON'T CHANGE ANYTHING HERE */
+    [alice, bob] = await ethers.getSigners();
 
     const CalyptusToken = await ethers.getContractFactory(
       "CalyptusToken",
-      owner
+      alice
     );
     const DoTrustLender = await ethers.getContractFactory(
       "DoTrustLender",
-      owner
+      alice
     );
 
     this.token = await CalyptusToken.deploy();
@@ -28,28 +29,32 @@ describe("[Challenge] Truster", function () {
       TOKENS_IN_POOL
     );
 
-    expect(await this.token.balanceOf(attacker.address)).to.equal("0");
+    expect(await this.token.balanceOf(bob.address)).to.equal("0");
   });
 
   it("Exploit", async function () {
     /** CODE YOUR EXPLOIT HERE  */
-    const DoNotTrustAttackerFactory = await ethers.getContractFactory(
-      "DoNotTrustAttacker",
-      owner
+    const DoNotTrustBobFactory = await ethers.getContractFactory(
+      "DoNotTrustBob",
+      alice
     );
-    this.exploit = await DoNotTrustAttackerFactory.deploy();
+    this.exploit = await DoNotTrustBobFactory.deploy();
     await this.exploit
-      .connect(attacker)
+      .connect(bob)
       .attack(this.pool.address, this.token.address);
   });
 
   after(async function () {
     /** SUCCESS CONDITIONS */
 
-    // Attacker has taken all tokens from the pool
-    expect(await this.token.balanceOf(attacker.address)).to.equal(
-      TOKENS_IN_POOL
-    );
-    expect(await this.token.balanceOf(this.pool.address)).to.equal("0");
+    // Bob has taken all tokens from the pool
+    if (
+      expect(await this.token.balanceOf(bob.address)).to.equal(
+        TOKENS_IN_POOL
+      ) &&
+      expect(await this.token.balanceOf(this.pool.address)).to.equal("0")
+    ) {
+      console.log(`You have passed the ${challengeName}.`);
+    }
   });
 });

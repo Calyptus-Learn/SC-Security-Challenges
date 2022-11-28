@@ -4,11 +4,11 @@ Time to get your hands dirty!
 
 In this section of the course, you get to use the smart contracts related skills you have acquired so far. This section has 10 challenges, and the difficulty of the challenges increases as you go further.
 
-Some challenges require you to steal the funds from the smart contracts, some want you to halt them using a DOS and some want you to blow the mind of the owner of the smart-contract.
+The game has two characters, Alice and Bob. You help Bob who is trying to give Alice a hard time. Some challenges may time to time include other actors as well.
 
-The game has two persistent players, The Owner and the Attacker. You obviously are the Attacker and the Owner is your target. Some challenges may time to time include other actors as well.
+Some challenges require Bob to steal the funds from Alice's smart contracts, some want Bob to halt her smart-contracts using a DOS and some want Bob to blow Alice's mind.
 
-Are you ready to give the owner a hard time?
+Are you ready to play the game?
 
 ## System Requirements
 
@@ -29,9 +29,9 @@ To use this repo you should have the following programmes installed in your mach
 
 The `contracts` folder consists of the smart-contracts mentioned in each challenge. `test` folder consists of the setup scripts of each challenge. Pass the test to win the challenge.
 
-Some challenges would need you to deploy your own smart-contracts, write those in the `contracts/YourAttackContracts` folder.
+Some challenges would need you to deploy your own smart-contracts, write those in the `contracts/BobsContracts` folder.
 
-Use ethers.js to code the steps of your hack into the `Exploit` section of the test script. Use the `attacker` account to perform all the exploits by using [.connect(attacker)](https://docs.ethers.io/v5/single-page/#/v5/api/contract/contract/-%23-Contract-connect) notation from ethers.js
+Use ethers.js to code the steps of your hack into the `Exploit` section of the test script. Use Bob's account to perform all the exploits by using [.connect(bob)](https://docs.ethers.io/v5/single-page/#/v5/api/contract/contract/-%23-Contract-connect) notation from ethers.js
 
 The default "Exploit" section of all the test files look like this:
 
@@ -55,9 +55,11 @@ npx hardhat test <PATH_TO_THE_TEST>
 
 ---
 
-The `Do Trust Lender` pool offers free flash-loans to everyone! Awesome right?
+Alice has deployed a `Do Trust Lender` pool that offers free flash-loans to everyone!
 
-The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge by stealing all the CPTs from the pool and sending them into the attacker's account.
+Awesome right?
+
+The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge by making Bob steal all the CPTs from the pool and send them into the his account.
 
 **Check out the [Do Trust Lender Pool](contracts/DoNotTrust/DoTrustLender.sol) smart-contract and find a way to hack it.**
 
@@ -70,6 +72,12 @@ The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge 
 ### Re-enter
 
 ---
+
+Alice has deployed a simple lending pool that allows its users to deposit ETH, and withdraw it at any point in time.
+
+This simple lending pool already has 1000 ETH in balance, and is offering free flash loans using the deposited ETH.
+
+Help Bob steal all the ETH from Alice's lending pool.
 
 **Check out the [ReenterPool](contracts/Reenter/Reenter.sol) smart-contract and find a way to hack it.**
 

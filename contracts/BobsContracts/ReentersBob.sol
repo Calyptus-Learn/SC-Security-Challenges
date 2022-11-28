@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/utils/Address.sol";
 import "contracts/Reenter/Reenter.sol";
 
-contract ReenterAttacker{
+contract ReentersBob{
     using Address for address payable;
     ReenterPool public pool;
     constructor(address _pool){

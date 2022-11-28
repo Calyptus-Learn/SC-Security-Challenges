@@ -1,26 +1,24 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
 
-describe("[Challenge] Reenter", function () {
-  let owner, attacker;
+describe("Reenter Challenge", function () {
+  let alice, bob;
 
   const ETHER_IN_POOL = ethers.utils.parseEther("1000");
 
   before(async function () {
-    /** SETUP SCENARIO - NO NEED TO CHANGE ANYTHING HERE */
-    [owner, attacker] = await ethers.getSigners();
+    /** SETUP SCENARIO - DON'T CHANGE ANYTHING HERE */
+    [alice, bob] = await ethers.getSigners();
 
     const ReenterPoolFactory = await ethers.getContractFactory(
       "ReenterPool",
-      owner
+      alice
     );
     this.pool = await ReenterPoolFactory.deploy();
 
     await this.pool.deposit({ value: ETHER_IN_POOL });
 
-    this.attackerInitialEthBalance = await ethers.provider.getBalance(
-      attacker.address
-    );
+    this.bobInitialEthBalance = await ethers.provider.getBalance(bob.address);
 
     expect(await ethers.provider.getBalance(this.pool.address)).to.equal(
       ETHER_IN_POOL
@@ -29,25 +27,26 @@ describe("[Challenge] Reenter", function () {
 
   it("Exploit", async function () {
     /** CODE YOUR EXPLOIT HERE */
-    const AttackerFactory = await ethers.getContractFactory(
-      "ReenterAttacker",
-      owner
-    );
-    this.attackerContract = await AttackerFactory.deploy(this.pool.address);
-    this.attackerContract.connect(attacker).attack();
+    const bobFactory = await ethers.getContractFactory("ReentersBob", alice);
+    this.bobsContract = await bobFactory.deploy(this.pool.address);
+    this.bobsContract.connect(bob).attack();
   });
 
   after(async function () {
     /** SUCCESS CONDITIONS */
-    expect(await ethers.provider.getBalance(this.pool.address)).to.be.equal(
-      "0"
-    );
+    if (
+      expect(await ethers.provider.getBalance(this.pool.address)).to.be.equal(
+        "0"
+      ) &&
+      expect(await ethers.provider.getBalance(bob.address)).to.be.gt(
+        this.bobInitialEthBalance
+      )
+    ) {
+      console.log("You have passed the Reenter Challenge");
+    }
 
-    // Not checking exactly how much is the final balance of the attacker,
-    // because it'll depend on how much gas the attacker spends in the attack
+    // Not checking exactly how much is the final balance of bob,
+    // because it'll depend on how much gas bob spends in the attack
     // If there were no gas costs, it would be balance before attack + ETHER_IN_POOL
-    expect(await ethers.provider.getBalance(attacker.address)).to.be.gt(
-      this.attackerInitialEthBalance
-    );
   });
 });
