@@ -2,7 +2,7 @@
 
 Time to get your hands dirty!
 
-In this section of the course, you get to use the smart contracts related skills you have acquired so far. This section has 10 challenges, and the difficulty of the challenges increases as you go further. Some challenges require you to steal the funds from the smart contracts, some want you to halt them using a DOS, some want you to blow the mind of the owner. The game has two persistent players, The Owner and the Attacker. You obviously are the Attacker and the Owner is your target. Some challenges may time to time include other actors as well.
+In this section of the course, you get to use the smart contracts related skills you have acquired so far. This section has 10 challenges, and the difficulty of the challenges increases as you go further. Some challenges require you to steal the funds from the smart contracts, some want you to halt them using a DOS and some want you to blow the mind of the owner of the smart-contract. The game has two persistent players, The Owner and the Attacker. You obviously are the Attacker and the Owner is your target. Some challenges may time to time include other actors as well.
 
 Are you ready to give the owner a hard time?
 
