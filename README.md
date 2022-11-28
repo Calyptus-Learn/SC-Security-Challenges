@@ -57,7 +57,9 @@ The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge 
 
 **Check out the [Do Trust Lender Pool](contracts/DoNotTrust/DoTrustLender.sol) smart-contract and find a way to hack it.**
 
-## **Pass this [Tester Script](test/do-not-trust.js) to win the challenge.**
+**Pass this [Tester Script](test/do-not-trust.js) to win the challenge.**
+
+---
 
 ## Challenge 2
 
@@ -68,3 +70,5 @@ The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge 
 **Check out the [ReenterPool](contracts/Reenter/Reenter.sol) smart-contract and find a way to hack it.**
 
 **Pass this [Tester Script](test/reenter.js) to win the challenge.**
+
+---
