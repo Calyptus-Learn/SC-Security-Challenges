@@ -4,7 +4,7 @@ Time to get your hands dirty!
 
 In this section of the course, you get to use the smart contracts related skills you have acquired so far. This section has 10 challenges, and the difficulty of the challenges increases as you go further.
 
-The game has two characters, Alice and Bob. You help Bob who is trying to give Alice a hard time. Some challenges may time to time include other actors as well.
+The game has two characters, Alice and Bob. You help Bob who is trying to give Alice a hard time. Some challenges may time to time introduce other characters as well.
 
 Some challenges require Bob to steal the funds from Alice's smart contracts, some want Bob to halt her smart-contracts using a DOS and some want Bob to blow Alice's mind.
 
