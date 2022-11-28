@@ -37,3 +37,6 @@ Some challenges need you to deploy your own smart-contracts, Write those in the 
 The `Do Trust Lender` pool offers free flash-loans to everyone! Awesome right?
 
 The pool has 1 million Calyptus Tokens(CPT) in balance. Complete the challenge by stealing all the CPTs from the pool and sending them into your account.
+
+[Do Trust Lender Pool](contracts/DoNotTrust/DoTrustLender.sol)
+[Tester Script](test/do-not-trust.js)
