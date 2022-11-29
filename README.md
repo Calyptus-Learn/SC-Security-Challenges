@@ -51,6 +51,20 @@ npx hardhat test <PATH_TO_THE_TEST>
 
 ## Challenge 1
 
+### No Privacy
+
+---
+
+Alice has deployed a secret Lock on blockchain that opens with a password. Help Bob find out the password and unlock the lock to win this challenge.
+
+**Check out the [No Privacy](contracts/NoPrivacy/AlicesLock.sol) smart-contract and find a way to unlock it.**
+
+**Pass this [Test](test/no-privacy.js) to win the challenge.**
+
+---
+
+## Challenge 2
+
 ### Do Not Trust
 
 ---
@@ -67,7 +81,7 @@ The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge 
 
 ---
 
-## Challenge 2
+## Challenge 3
 
 ### Re-enter
 
@@ -84,3 +98,5 @@ Help Bob steal all the ETH from Alice's lending pool.
 **Pass this [Test](test/reenter.js) to win the challenge.**
 
 ---
+
+## More Levels Comming Soon...
