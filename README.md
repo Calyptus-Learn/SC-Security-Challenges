@@ -22,7 +22,7 @@ To use this repo you should have the following programmes installed in your mach
 ### Clone this repo, cd into it and install the dependencies by pasting the following code into your terminal:
 
 ```bash
-git clone https://github.com/Calyptus-Learn/SC-Security-Challenges.git && cd Calyptus-CTF && yarn install
+git clone https://github.com/Calyptus-Learn/SC-Security-Challenges.git && cd SC-Security-Challenges && yarn install
 ```
 
 ### Start Solving the challenges
