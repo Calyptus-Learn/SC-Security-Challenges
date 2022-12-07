@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract CalyptusHill {
 
-  address atTheTop;
+  address public atTheTop;
   uint public bribe;
   address public owner;
 
@@ -20,7 +20,4 @@ contract CalyptusHill {
     bribe = msg.value;
   }
 
-  function top() public view returns (address) {
-    return atTheTop;
-  }
 }

@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-contract Attack {
+contract HillAttack {
 
   function attack(address _target) public payable {
     (bool result,) = _target.call{value:msg.value}("");
