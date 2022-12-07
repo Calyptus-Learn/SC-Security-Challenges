@@ -3,34 +3,38 @@ const { expect } = require("chai");
 const challengeName = "Calyptus-Hill Challenge";
 
 describe(challengeName, function () {
-  let alice, bob;
+  let deployer, alice, bob;
+
+  const INITIAL_BRIBE = ethers.utils.parseEther("1");
 
   before(async function () {
     /** SETUP SCENARIO - DON'T CHANGE ANYTHING HERE */
-    [alice, bob] = await ethers.getSigners();
+    [deployer, alice, bob] = await ethers.getSigners();
+    const CalyptusHill = await ethers.getContractFactory(
+      "CalyptusHill",
+      deployer
+    );
 
-    const HeadOrTale = await ethers.getContractFactory("HeadOrTale", alice);
+    this.calyptusHill = await CalyptusHill.deploy(alice.address, {
+      value: INITIAL_BRIBE,
+    });
 
-    this.headOrTale = await HeadOrTale.deploy();
-
-    expect(await this.headOrTale.wins()).to.equal(0);
+    expect(await this.headOrTale.bribe()).to.equal(INITIAL_BRIBE);
   });
 
   it("Exploit", async function () {
     /** CODE YOUR EXPLOIT HERE  */
-    const Attacker = await ethers.getContractFactory("BobsGuess", bob);
-
-    this.attacker = await Attacker.deploy();
-    for (let i = 0; i < 5; i++) {
-      this.attacker.connect(bob).cheat(this.headOrTale.address);
-    }
+    // const Attacker = await ethers.getContractFactory("BobsGuess", bob);
+    // this.calyptusHill.connect(bob).
   });
 
   after(async function () {
     /** SUCCESS CONDITIONS */
 
-    // Bob has won 5 times in a row
-    if (expect(await this.headOrTale.wins()).to.equal(5)) {
+    // Alice lends a small amount of ether from Bob
+
+    // Bob is at the top once and for all
+    if (expect(await this.calyptusHill.atTheTop()).to.equal(bob.address)) {
       console.log(`You have passed the ${challengeName}.`);
     }
   });
