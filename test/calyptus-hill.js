@@ -1,9 +1,5 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
-const {
-  anyValue,
-  reverted,
-} = require("@nomicfoundation/hardhat-chai-matchers/");
 
 const challengeName = "Calyptus-Hill Challenge";
 
