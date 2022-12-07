@@ -39,7 +39,7 @@ describe(challengeName, function () {
     await expect(
       alice.sendTransaction({
         to: this.calyptusHill.address,
-        value: bribe.add("1"),
+        value: bribe,
       })
     ).to.be.reverted;
 
