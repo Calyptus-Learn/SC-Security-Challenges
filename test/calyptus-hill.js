@@ -19,21 +19,30 @@ describe(challengeName, function () {
       value: INITIAL_BRIBE,
     });
 
-    expect(await this.headOrTale.bribe()).to.equal(INITIAL_BRIBE);
+    expect(await this.calyptusHill.bribe()).to.equal(INITIAL_BRIBE);
   });
 
   it("Exploit", async function () {
     /** CODE YOUR EXPLOIT HERE  */
-    // const Attacker = await ethers.getContractFactory("BobsGuess", bob);
-    // this.calyptusHill.connect(bob).
+
+    bob.sendTransaction({
+      to: this.calyptusHill.address,
+      value: ethers.utils.parseEther("1"),
+    });
   });
 
   after(async function () {
     /** SUCCESS CONDITIONS */
 
-    // Alice lends a small amount of ether from Bob
+    // Alice tries to reclaim the ownership
+    const newValue = await this.calyptusHill.bribe();
 
-    // Bob is at the top once and for all
+    await alice.sendTransaction({
+      to: this.calyptusHill.address,
+      value: newValue.add("1"),
+    });
+
+    // Is Bob at the top once and for all?
     if (expect(await this.calyptusHill.atTheTop()).to.equal(bob.address)) {
       console.log(`You have passed the ${challengeName}.`);
     }
