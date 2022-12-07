@@ -65,7 +65,7 @@ Alice has deployed a secret Lock on blockchain that opens with a password. Help 
 
 ## Challenge 2
 
-### Head or Tale
+### Head or Tail
 
 ---
 
@@ -73,9 +73,9 @@ Alice and Bob are flipping a coin to decide who is a better smart contract progr
 
 Help Bob win the coin flip 5 times in a row to win the challenge.
 
-**Check out the [Head or Tale](contracts/HeadOrTale/HeadOrTale.sol) smart-contract and find a way to hack it.**
+**Check out the [Head or Tail](contracts/HeadOrTale/HeadOrTail.sol) smart-contract and find a way to hack it.**
 
-**Pass this [Test](test/head-or-tale.js) to win the challenge.**
+**Pass this [Test](test/head-or-tail.js) to win the challenge.**
 
 ---
 

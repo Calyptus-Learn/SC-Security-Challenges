@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract HeadOrTale {
+contract HeadOrTail {
 
   uint256 public wins;
   uint256 hash;

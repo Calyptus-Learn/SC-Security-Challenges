@@ -1,6 +1,6 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
-const challengeName = "Head or Tale Challenge";
+const challengeName = "Head or Tail Challenge";
 
 describe(challengeName, function () {
   let alice, bob;
@@ -9,7 +9,7 @@ describe(challengeName, function () {
     /** SETUP SCENARIO - DON'T CHANGE ANYTHING HERE */
     [alice, bob] = await ethers.getSigners();
 
-    const HeadOrTale = await ethers.getContractFactory("HeadOrTale", alice);
+    const HeadOrTale = await ethers.getContractFactory("HeadOrTail", alice);
 
     this.headOrTale = await HeadOrTale.deploy();
 
