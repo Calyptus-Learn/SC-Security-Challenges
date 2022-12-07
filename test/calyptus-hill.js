@@ -1,6 +1,6 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
-const challengeName = "Head or Tale Challenge";
+const challengeName = "Calyptus-Hill Challenge";
 
 describe(challengeName, function () {
   let alice, bob;
