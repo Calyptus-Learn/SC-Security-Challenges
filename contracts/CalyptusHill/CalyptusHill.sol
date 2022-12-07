@@ -7,9 +7,9 @@ contract CalyptusHill {
   uint public bribe;
   address public owner;
 
-  constructor() payable {
+  constructor( address _atTheTop) payable {
     owner = msg.sender;  
-    atTheTop = msg.sender;
+    atTheTop = _atTheTop;
     bribe = msg.value;
   }
 
