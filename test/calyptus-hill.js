@@ -24,11 +24,6 @@ describe(challengeName, function () {
 
   it("Exploit", async function () {
     /** CODE YOUR EXPLOIT HERE  */
-
-    bob.sendTransaction({
-      to: this.calyptusHill.address,
-      value: ethers.utils.parseEther("1"),
-    });
   });
 
   after(async function () {
