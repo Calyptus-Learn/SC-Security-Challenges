@@ -73,9 +73,9 @@ Alice and Bob are flipping a coin to decide who is a better smart contract progr
 
 Help Bob win the coin flip 5 times in a row to win the challenge.
 
-**Check out the [Head or Tail](contracts/HeadOrTale/HeadOrTale.sol) smart-contract and find a way to hack it.**
+**Check out the [Head or Tail](contracts/HeadOrTale/HeadOrTail.sol) smart-contract and find a way to hack it.**
 
-**Pass this [Test](test/head-or-tale.js) to win the challenge.**
+**Pass this [Test](test/head-or-tail.js) to win the challenge.**
 
 ---
 
@@ -87,11 +87,11 @@ Help Bob win the coin flip 5 times in a row to win the challenge.
 
 Everyone wants to be at the top of Mount Calyptus, but there's space for only one. As they say, everything can be bought with money, so can be the spot at the summit. Whoever sends the Mount Calyptus Smart Contract an amount of ether that is larger than the current bribe replaces the previous climber. On such an event, the replaced climber gets paid the new bribe, making a bit of ether in the process!
 
-Alice wants to be at the top and so does Bob! Alice reclaims the spot as soon as Bob claims it sending higher bribe.
+Alice wants to be at the top at all cost! Alice reclaims the top spot as soon as anyone claims it sending equal bribe.
 
-Help Bob be at the top by stopping Alice reclaim the atTheTop position from Bob.
+Help Bob stop Alice from reclaiming the atTheTop position.
 
-**Check out the [Mount Calyptus](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
+**Check out the [Calyptus Hill](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
 
 **Pass this [Test](test/calyptus-hill.js) to win the challenge.**
 
