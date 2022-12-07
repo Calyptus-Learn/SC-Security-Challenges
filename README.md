@@ -91,7 +91,7 @@ Alice wants to be at the top and so does Bob! Alice reclaims the spot as soon as
 
 Help Bob be at the top by stopping Alice reclaim the atTheTop position from Bob.
 
-**Check out the [Head or Tale](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
+**Check out the [Mount Calyptus](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
 
 **Pass this [Test](test/calyptus-hill.js) to win the challenge.**
 
