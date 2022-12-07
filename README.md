@@ -22,7 +22,7 @@ To use this repo you should have the following programmes installed in your mach
 ### Clone this repo, cd into it and install the dependencies by pasting the following code into your terminal:
 
 ```bash
-git clone https://github.com/nizhunt/Calyptus-CTF.git && cd Calyptus-CTF && yarn install
+git clone https://github.com/Calyptus-Learn/SC-Security-Challenges.git && cd SC-Security-Challenges && yarn install
 ```
 
 ### Start Solving the challenges
@@ -91,9 +91,9 @@ Alice wants to be at the top and so does Bob! Alice reclaims the spot as soon as
 
 Help Bob be at the top by stopping Alice reclaim the atTheTop position from Bob.
 
-**Check out the [Head or Tale](contracts/HeadOrTale/HeadOrTale.sol) smart-contract and find a way to hack it.**
+**Check out the [Head or Tale](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
 
-**Pass this [Test](test/head-or-tale.js) to win the challenge.**
+**Pass this [Test](test/calyptus-hill.js) to win the challenge.**
 
 ---
 
