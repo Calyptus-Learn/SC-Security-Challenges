@@ -22,7 +22,7 @@ To use this repo you should have the following programmes installed in your mach
 ### Clone this repo, cd into it and install the dependencies by pasting the following code into your terminal:
 
 ```bash
-git clone https://github.com/Calyptus-Learn/SC-Security-Challenges.git && cd SC-Security-Challenges && yarn install
+git clone https://github.com/nizhunt/Calyptus-CTF.git && cd Calyptus-CTF && yarn install
 ```
 
 ### Start Solving the challenges
@@ -65,6 +65,38 @@ Alice has deployed a secret Lock on blockchain that opens with a password. Help 
 
 ## Challenge 2
 
+### Head or Tale
+
+---
+
+Alice and Bob are flipping a coin to decide who is a better smart contract programer.
+
+Help Bob win the coin flip 5 times in a row to win the challenge.
+
+**Check out the [Head or Tale](contracts/HeadOrTale/HeadOrTale.sol) smart-contract and find a way to hack it.**
+
+**Pass this [Test](test/head-or-tale.js) to win the challenge.**
+
+---
+
+## Challenge 3
+
+### Mount Calyptus
+
+---
+
+Everyone wants to be at the top of Mount Calyptus, but there's space for only one. As they say, everything can be bought with money, so can be the spot at the summit. Whoever sends the Mount Calyptus Smart Contract an amount of ether that is larger than the current bribe replaces the previous climber. On such an event, the replaced climber gets paid the new bribe, making a bit of ether in the process!
+
+Break the smart-contract and
+
+**Check out the [Head or Tale](contracts/HeadOrTale/HeadOrTale.sol) smart-contract and find a way to hack it.**
+
+**Pass this [Test](test/head-or-tale.js) to win the challenge.**
+
+---
+
+## Challenge 4
+
 ### Do Not Trust
 
 ---
@@ -81,7 +113,7 @@ The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge 
 
 ---
 
-## Challenge 3
+## Challenge 5
 
 ### Re-enter
 
@@ -99,7 +131,7 @@ Help Bob steal all the ETH from Alice's lending pool.
 
 ---
 
-## More Levels Comming Soon...
+## More Levels Coming Soon
 
 > Stuck at a level? We have provided the solution to all the tests along with respective smart contracts where ever needed in the solution branch. Checkout to the solution branch by typing the following in your terminal:
 
