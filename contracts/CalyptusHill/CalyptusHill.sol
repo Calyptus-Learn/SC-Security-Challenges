@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract HillTop {
+contract CalyptusHill {
 
   address atTheTop;
   uint public prize;
@@ -20,7 +20,7 @@ contract HillTop {
     prize = msg.value;
   }
 
-  function _king() public view returns (address) {
+  function top() public view returns (address) {
     return atTheTop;
   }
 }
