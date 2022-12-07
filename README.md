@@ -138,5 +138,5 @@ Help Bob steal all the ETH from Alice's lending pool.
 > Stuck at a level? We have provided the solution to all the tests along with respective smart contracts where ever needed in the solution branch. Checkout to the solution branch by typing the following in your terminal:
 
 ```bash
-git checkout origin/Solutions
+git checkout Solutions
 ```
