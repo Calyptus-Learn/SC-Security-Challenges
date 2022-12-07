@@ -91,7 +91,7 @@ Alice wants to be at the top and so does Bob! Alice reclaims the spot as soon as
 
 Help Bob be at the top by stopping Alice reclaim the atTheTop position from Bob.
 
-**Check out the [Head or Tale](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
+**Check out the [Calyptus Hill](contracts/CalyptusHill/CalyptusHill.sol) smart-contract and find a way to hack it.**
 
 **Pass this [Test](test/calyptus-hill.js) to win the challenge.**
 
@@ -138,5 +138,5 @@ Help Bob steal all the ETH from Alice's lending pool.
 > Stuck at a level? We have provided the solution to all the tests along with respective smart contracts where ever needed in the solution branch. Checkout to the solution branch by typing the following in your terminal:
 
 ```bash
-git checkout origin/Solutions
+git checkout Solutions
 ```
