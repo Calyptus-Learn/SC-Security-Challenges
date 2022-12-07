@@ -87,7 +87,9 @@ Help Bob win the coin flip 5 times in a row to win the challenge.
 
 Everyone wants to be at the top of Mount Calyptus, but there's space for only one. As they say, everything can be bought with money, so can be the spot at the summit. Whoever sends the Mount Calyptus Smart Contract an amount of ether that is larger than the current bribe replaces the previous climber. On such an event, the replaced climber gets paid the new bribe, making a bit of ether in the process!
 
-Break the smart-contract and
+Alice wants to be at the top and so does Bob! Alice reclaims the spot as soon as Bob claims it sending higher bribe.
+
+Help Bob be at the top by stopping Alice reclaim the atTheTop position from Bob.
 
 **Check out the [Head or Tale](contracts/HeadOrTale/HeadOrTale.sol) smart-contract and find a way to hack it.**
 
