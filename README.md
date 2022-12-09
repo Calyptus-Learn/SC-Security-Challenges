@@ -1,7 +1,7 @@
 # Calyptus Smart Contract Security Challenge
----
+
 <p align="center">
-  <img src="https://calyptus.co/wp-content/uploads/logo.svg" width="256" title="Calyptus">
+  <img src="https://calyptus.co/wp-content/uploads/logo.svg" width="256" title="Calyptus" >
 </p>
 <br />
 
