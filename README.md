@@ -58,7 +58,7 @@ npx hardhat test <PATH_TO_THE_TEST>
 
 ## Challenge 1
 
-### No Privacy
+### No Privacy (Vulnerability: Accessing Private Variables)
 
 ---
 
@@ -72,7 +72,7 @@ Alice has deployed a secret Lock on blockchain that opens with a password. Help 
 
 ## Challenge 2
 
-### Head or Tail
+### Head or Tail (Vulnerablilty: Randomness through global variable)
 
 ---
 
@@ -88,7 +88,7 @@ Help Bob win the coin flip 5 times in a row to win the challenge.
 
 ## Challenge 3
 
-### Mount Calyptus
+### Mount Calyptus (Vulnerability: Denial of Service due to push pattern)
 
 ---
 
@@ -106,7 +106,7 @@ Help Bob stop Alice from reclaiming the atTheTop position.
 
 ## Challenge 4
 
-### Do Not Trust
+### Do Not Trust (Vulnerability: Insecure External Call)
 
 ---
 
@@ -124,7 +124,7 @@ The pool has 1 million Calyptus Tokens (CPT) in balance. Complete the challenge 
 
 ## Challenge 5
 
-### Re-enter
+### Re-enter (Vulnerability: Reentrancy)
 
 ---
 
