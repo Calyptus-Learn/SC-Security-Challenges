@@ -33,7 +33,9 @@ describe(challengeName, function () {
   });
 
   it("Exploit", async function () {
-    /** CODE YOUR EXPLOIT HERE  */
+    const Attack = await ethers.getContractFactory("Attack");
+    const attack = await Attack.deploy();
+    await attack.connect(bob).attack(this.pool.address, this.token.address);
   });
 
   after(async function () {
